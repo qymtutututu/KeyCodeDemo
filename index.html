@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>键盘布局和敲击效果(简易)</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script>
+        function play(event) {
+            var key = document.querySelector(`div[data-key="${event.keyCode}"]`);
+            key.classList.add('playing')
+        }
+         function remove(event){
+            var key = document.querySelector(`div[data-key="${event.keyCode}"]`);
+            key.classList.remove('playing')
+        }
+        window.addEventListener('keydown',play);
+        window.addEventListener('keyup',remove)
+        
+    </script>
+</head>
+
+<body>
+    <p>键盘布局与敲击效果</p>
+    <div id="main1">
+        <div class="key" data-key='81'>Q</div>
+        <div class="key" data-key='87'>W</div>
+        <div class="key" data-key='69'>E</div>
+        <div class="key" data-key='82'>R</div>
+        <div class="key" data-key='84'>T</div>
+        <div class="key" data-key='89'>Y</div>
+        <div class="key" data-key='85'>U</div>
+        <div class="key" data-key='73'>I</div>
+        <div class="key" data-key='79'>O</div>
+        <div class="key" data-key='80'>P</div>
+    </div>
+    <div id="main2">
+        <div class="key" data-key='65'>A</div>
+        <div class="key" data-key='83'>S</div>
+        <div class="key" data-key='68'>D</div>
+        <div class="key" data-key='70'>F</div>
+        <div class="key" data-key='71'>G</div>
+        <div class="key" data-key='72'>H</div>
+        <div class="key" data-key='74'>J</div>
+        <div class="key" data-key='75'>K</div>
+        <div class="key" data-key='76'>L</div>
+    </div>
+    <div id="main3">
+        <div class="key" data-key='90'>Z</div>
+        <div class="key" data-key='88'>X</div>
+        <div class="key" data-key='67'>C</div>
+        <div class="key" data-key='86'>V</div>
+        <div class="key" data-key='66'>B</div>
+        <div class="key" data-key='78'>N</div>
+        <div class="key" data-key='77'>M</div>
+    </div>
+</body>
+</html>
